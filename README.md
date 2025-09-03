@@ -1,32 +1,28 @@
-Animal Detection Using YOLOv8
+🐾 Animal Detection Using YOLOv8
 
-This project implements object detection for animals using YOLOv8 and a custom dataset. It trains a YOLOv8 model, validates it, and performs inference on test images.
+Detect and classify animals in images using YOLOv8 and a custom dataset. This project trains a YOLOv8 model, evaluates its performance, and performs inference on test images with bounding boxes and confidence scores.
 
-Table of Contents
+🌟 Features
 
-Overview
+✅ Detect multiple animal species in images
 
-Installation
+✅ Custom dataset from Roboflow
 
-Dataset
+✅ Training with YOLOv8 (PyTorch backend)
 
-Training
+✅ High mAP detection with bounding boxes and confidence
 
-Validation
+✅ Easy inference on Google Drive images
 
-Inference
+📸 Demo
 
-Results
+Here’s an example of predictions:
 
-License
+Bounding boxes with animal class names and confidence scores.
 
-Overview
+🛠️ Installation
 
-This project uses the Roboflow API to download a custom animal dataset and train a YOLOv8 model for object detection. It also supports inference on new images and displays bounding boxes with class labels and confidence scores.
-
-Installation
-
-Install the required Python packages:
+Clone this repository and install dependencies:
 
 !pip install roboflow
 !pip install ultralytics opencv-python matplotlib
@@ -37,9 +33,9 @@ Mount Google Drive to access test images:
 from google.colab import drive
 drive.mount('/content/drive')
 
-Dataset
+📂 Dataset
 
-The dataset is hosted on Roboflow and contains images of different animals. It is downloaded in YOLOv8 format using:
+The dataset is hosted on Roboflow:
 
 from roboflow import Roboflow
 rf = Roboflow(api_key="YOUR_API_KEY")
@@ -48,17 +44,17 @@ version = project.version(2)
 dataset = version.download("yolov8")
 
 
-The dataset directory includes:
+Dataset contains:
 
 train/ – Training images and labels
 
 valid/ – Validation images and labels
 
-test/ – Test images (optional)
+test/ – Test images
 
-Training
+🚀 Training
 
-The YOLOv8 model (yolov8n.pt) is trained on the dataset with the following settings:
+Train YOLOv8 on the dataset:
 
 from ultralytics import YOLO
 import torch
@@ -75,22 +71,22 @@ model.train(
     device=device
 )
 
-Validation
+📊 Validation
 
-After training, model performance is evaluated using the val() method:
+Evaluate the trained model:
 
 metrics = model.val()
 print(f"mAP50: {metrics.box.map:.3f}")
 print(f"mAP50-95: {metrics.box.map50:.3f}")
 
 
-mAP50 – Mean Average Precision at IoU threshold 0.5
+mAP50 – Mean Average Precision at IoU 0.5
 
-mAP50-95 – Mean Average Precision averaged over IoU thresholds 0.5 to 0.95
+mAP50-95 – Mean Average Precision averaged over IoU thresholds 0.5–0.95
 
-Inference
+🖼️ Inference
 
-Run inference on images stored in Google Drive:
+Run inference on test images stored in Google Drive:
 
 import cv2
 import glob
@@ -121,15 +117,25 @@ for image_path in glob.glob(f"{test_images_folder}/*.jpg"):
     plt.axis('off')
     plt.show()
 
-Results
+📈 Results
 
-Bounding boxes with class labels and confidence scores are displayed on test images.
+Bounding boxes with class names and confidence scores are displayed on images.
 
-Example metrics from validation:
+Example metrics:
 
 mAP50: 0.85
 mAP50-95: 0.62
 
-License
+⚙️ Requirements
 
-This project is for educational purposes. Dataset usage is subject to Roboflow terms.
+Python ≥ 3.8
+
+PyTorch
+
+Ultralytics YOLOv8
+
+OpenCV, Matplotlib
+
+📄 License
+
+This project is for educational purposes only. Dataset usage is subject to Roboflow terms.
