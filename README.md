@@ -85,9 +85,9 @@ These measure the accuracy of object detection predictions.
 
 Example detections produced by the trained model.
 
-![Detection Result](results/sample_result1.jpg)
+![Detection Result](results/Test_1.jpg)
 
-![Detection Result](results/sample_result2.jpg)
+![Detection Result](results/gb.jpg)
 
 Each detection includes:
 
