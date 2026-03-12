@@ -1,4 +1,4 @@
-# 🐾 Animal Detection using YOLOv8
+# Animal Detection using YOLOv8
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-red)
@@ -9,7 +9,7 @@ This project trains a custom object detection model to detect animals in images 
 
 ---
 
-# 🚀 Open in Google Colab
+# Open in Google Colab
 
 Run the notebook directly in **Google Colab** to avoid dependency issues.
 
@@ -19,23 +19,23 @@ Run the notebook directly in **Google Colab** to avoid dependency issues.
 
 ---
 
-# 📌 Project Overview
+# Project Overview
 
 This project implements an **Animal Detection System** using **YOLOv8**, a state-of-the-art real-time object detection algorithm.
 
 The system performs:
 
-* 🐕 Detect animals in images
-* 📦 Draw bounding boxes around detected animals
-* 🎯 Show prediction confidence scores
-* 📊 Evaluate model performance using mAP metrics
-* 🖼 Run inference on custom test images
+* Detect animals in images
+* Draw bounding boxes around detected animals
+* Show prediction confidence scores
+* Evaluate model performance using mAP metrics
+* Run inference on custom test images
 
 The dataset is prepared using **Roboflow** and trained using the **Ultralytics YOLOv8 framework**.
 
 ---
 
-# 🐾 Supported Animal Classes
+# Supported Animal Classes
 
 The model is trained to detect the following **five wildlife species**:
 
@@ -53,7 +53,7 @@ Images containing other animals may **not be detected correctly** because they w
 This makes the model suitable for **wildlife monitoring and conservation research focused on these species**.
 
 
-# 🛠 Tech Stack
+# Tech Stack
 
 | Technology   | Purpose                    |
 | ------------ | -------------------------- |
@@ -67,7 +67,7 @@ This makes the model suitable for **wildlife monitoring and conservation researc
 
 ---
 
-# 📊 Model Training
+# Model Training
 
 Model used: **YOLOv8 Nano (yolov8n)**
 
@@ -84,7 +84,7 @@ Training is performed using the **Ultralytics YOLO library** in Google Colab.
 
 ---
 
-# 📈 Model Performance
+# Model Performance
 
 Example evaluation results:
 
@@ -102,7 +102,7 @@ These metrics indicate the **accuracy of the object detection model**.
 
 ---
 
-# 🖼 Detection Results
+# Detection Results
 
 Example outputs from the trained YOLOv8 model.
 
@@ -126,7 +126,7 @@ Click the **Open in Colab** button above.
 
 ---
 
-# ⚡ Run with GPU (Recommended)
+# Run with GPU (Recommended)
 
 For best performance, run this notebook in **Google Colab with a T4 GPU**.
 
@@ -157,7 +157,7 @@ True
 
 ---
 
-# 🚀 Why use T4 GPU?
+# Why use T4 GPU?
 
 Using **T4 GPU** greatly improves YOLOv8 training performance.
 
@@ -203,7 +203,7 @@ test_images_folder = "/content/drive/MyDrive/sample_test_images"
 
 ---
 
-# 📦 Dataset
+# Dataset
 
 The dataset is created and managed using **Roboflow**.
 
@@ -216,14 +216,14 @@ Dataset preparation steps:
 
 ---
 
-# 🔮 Future Improvements
+# Future Improvements
 
 Possible enhancements for the project:
 
-* 🎥 Real-time **webcam animal detection**
-* 🌳 **Wildlife monitoring system**
-* 🔗 Integration with **object tracking algorithms**
-* 📡 Edge deployment using **Raspberry Pi**
-* 📱 Mobile or web-based detection application
+*  Real-time **webcam animal detection**
+*  **Wildlife monitoring system**
+*  Integration with **object tracking algorithms**
+*  Edge deployment using **Raspberry Pi**
+*  Mobile or web-based detection application
 
 ---
